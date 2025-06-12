@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Rico Investimentos</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+
+    <main class="main-cadastro">
+        
+        <section class="agradecimento">
+            <h1>Obrigado por entrar em contato!</h1>
+            <p>Recebemos sua mensagem e em breve retornaremos com uma resposta.</p>
+        </section>
+
+    </main>
+    
+    <div id="footer" style="clear: both; margin-top: 40px;"></div>
+    <script>
+        fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+</body>
+</html>

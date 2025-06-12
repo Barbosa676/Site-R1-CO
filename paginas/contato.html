@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Rico Investimentos</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+     <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <script src="../scripts/contato.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+
+    <main class="main-contato">
+        <section class="contato">
+            <h1>Fale Conosco</h1>
+            <form action="https://formsubmit.co/gabriel.masterson2602@gmail.com" method="POST" id="question-form">
+                <div class="input-field">
+                    <label for="email-input">Seu e-mail:</label>
+                    <input name="email" id="email-input" type="email" placeholder="Digite seu e-mail..." required autocomplete="email">
+                </div>
+
+                <div class="input-field">
+                    <label for="question-input">Sua mensagem:</label>
+                    <textarea name="message" id="question-input" placeholder="Digite sua dúvida ou sugestão..." required></textarea>
+                </div>
+                <input type="hidden" name="_subject" id="subject-input" value="Nova mensagem de contato">
+                <!--<input type="hidden" name="_next" value="obrigado.html">-->
+                <button type="submit" class="botao">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer" style="clear: both; margin-top: 40px;"></div>
+    <script>
+        fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+</body>
+</html>

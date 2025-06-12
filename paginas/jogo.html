@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo Simples</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+
+    <div class="body-jogo">
+        <h1>Clique no Quadrado!</h1>
+        <div id="jogo">
+            <div id="alvo"></div>
+        </div>
+        <p>Pontos: <span id="pontos">0</span></p>
+        <script>
+            const alvo = document.getElementById('alvo');
+            const jogo = document.getElementById('jogo');
+            const pontos = document.getElementById('pontos');
+            let placar = 0;
+
+            function moverAlvo() {
+                const maxX = jogo.clientWidth - alvo.clientWidth;
+                const maxY = jogo.clientHeight - alvo.clientHeight;
+                alvo.style.left = Math.random() * maxX + 'px';
+                alvo.style.top = Math.random() * maxY + 'px';
+            }
+
+            alvo.onclick = () => {
+                placar++;
+                pontos.textContent = placar;
+                moverAlvo();
+            };
+
+            moverAlvo();
+        </script>
+    </div>
+</body>
+</html>

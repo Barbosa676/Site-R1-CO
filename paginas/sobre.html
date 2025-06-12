@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Rico Investimentos</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+
+    <img src="../imagens/hero.jpg" class="hero-img" alt="">
+
+    <main id="main-content-about">
+        <section class="about">
+            <h1>Sobre o Rico Investimentos</h1>
+            <p>O <strong>Rico Investimentos</strong> é uma plataforma voltada para quem deseja maximizar seu patrimônio de forma segura e eficiente.</p>
+            <p>Nossa missão é democratizar o acesso ao mundo dos investimentos, tornando-o mais transparente e intuitivo para todos.</p>
+        </section>
+
+        <section class="founders">
+            <h2 class="fund">Fundadores</h2>
+            <div class="founders-list">
+                <div class="founder">
+                    <div class="founder-card">
+                        <div class="founder-front">
+                            <img src="../imagens/masterrs.jpg" alt="Gabriel Masterson" class="founder-photo">
+                        </div>
+                        <div class="founder-back">
+                            <h3>Gabriel Masterson</h3>
+                            <p>Especialista em tecnologia e investimentos. Focado em desenvolver soluções digitais para investidores.</p>
+                            <div class="social-links">
+                                <a href="#" target="_blank">Instagram</a>
+                                <a href="https://github.com/GabrieldotMasterson" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="founder">
+                    <div class="founder-card">
+                        <div class="founder-front">
+                            <img src="../imagens/bobosa.jpeg" alt="Gabriel Masterson" class="founder-photo">
+                        </div>
+                        <div class="founder-back">
+                            <h3>Gabriel Barbosa</h3>
+                            <p>Empreendedor e entusiasta do mercado financeiro. Atua na criação de estratégias de investimento inovadoras.</p>
+                            <div class="social-links">
+                                <a href="#" target="_blank">Instagram</a>
+                                <a href="https://github.com/Barbosa676" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+            </style>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    
+    <div id="footer" style="clear: both; margin-top: 40px;"></div>
+    <script>
+        fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+</body>
+</html>

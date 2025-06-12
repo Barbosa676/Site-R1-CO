@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Rico Investimentos</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+
+    <main class="main-cadastro">
+        <section class="cadastro">
+            <h1>Faça seu login</h1>
+            <form>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="botao">Entrar</button>
+                <p class="register-link">Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Rico Investimentos - Todos os direitos reservados</p>
+        <ul class="footer-links">
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="">Política de privacidade</a></li>
+            <li><a href="">Termos de uso</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

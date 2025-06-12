@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custos - ApostaFácil</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+
+    <img src="../imagens/hero.jpg" class="hero-img" alt="">
+    <main id="main-content-about">
+        <section>
+            <h1>Custos e Taxas</h1>
+            <p>Confira abaixo os custos associados aos nossos serviços de apostas:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serviço</th>
+                        <th>Taxa</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cadastro</td>
+                        <td>Grátis</td>
+                        <td>Sem custo para criar sua conta</td>
+                    </tr>
+                    <tr>
+                        <td>Depósito</td>
+                        <td>Grátis</td>
+                        <td>Adicione saldo sem taxas</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de Saque</td>
+                        <td>R$ 4,00 por transação</td>
+                        <td>Aplicável a cada retirada de saldo</td>
+                    </tr>
+                    <tr>
+                        <td>Comissão sobre Ganhos</td>
+                        <td>5% sobre o valor do prêmio</td>
+                        <td>Cobrada apenas em apostas vencedoras</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de Inatividade</td>
+                        <td>R$ 10,00/mês</td>
+                        <td>Cobrada após 12 meses sem movimentação</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div id="footer" style="clear: both; margin-top: 40px;"></div>
+    <script>
+        fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar header:', err));
+    </script>
+</body>
+</html>
